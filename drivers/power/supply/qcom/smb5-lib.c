@@ -974,7 +974,6 @@ int smblib_set_fastcharge_mode(struct smb_charger *chg, bool enable)
 	}
 
 	if (chg->use_bq_pump && is_bq25970_available(chg))
-#ifdef CONFIG_K6_CHARGE
 		fastcharge_soc_thr = 85;
 	else
 		fastcharge_soc_thr = 90;
